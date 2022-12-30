@@ -1,0 +1,662 @@
+@import"utilities/variables";
+@import"utilities/mapas";
+@import"utilities/extend";
+@import"utilities/mixin";
+
+//Tipo de letra
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Estilos */
+
+.contenedor{
+    min-height: 100vh;
+    @extend %flex-c;
+    justify-content: space-between;
+    gap: 1.9rem;
+    //Icono de whatsapp
+    .whatsapp{
+        display: none;
+    }
+
+    //Header
+    .encabezado{
+        width: 100%;
+        background-color: map-get($colores,color_encabezado);
+
+        height: 14rem;
+
+        @extend %flex-r;
+
+        border-bottom: 1px solid map-get($colores,color_encabezado-borde);
+
+        .encabezado__logo{
+            width: 40%;
+            a{
+                img{
+                    width: 8rem;
+                    display:block;
+                    margin:auto;
+                }
+            }
+        }
+
+        .encabezado__menu{
+            ul{
+                li{
+                    list-style-type: none;
+                    text-align: center;
+                    padding-bottom: 0;
+
+                    a{
+                        text-decoration:none;
+                        @include texto(1.4rem);
+                        font-weight: 400;
+                        color: map-get($colores,color_encabezado-letra);
+                    }
+                }
+            }
+        }
+    }
+
+    //Main
+    .principal{
+        width: 90%;
+        @extend %flex-c;
+        gap: 1.5rem;
+
+
+        .principal__texto{
+            @include texto(1.3rem);
+
+            h1{
+                font-size: 3rem;
+                color: map-get($colores,color_seccion);
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        .principal__img{
+            display: none;
+        }
+
+        .card__boton{
+            background-color: map-get($colores,color_encabezado);
+            color: map-get($colores,color_encabezado-letra);
+            border: 1px solid map-get($colores,color_encabezado-borde);
+
+        }
+    }
+
+    //Section
+    .seccion{
+        background-color: map-get($colores,color_seccion);
+        width: 90%;
+        @extend %flex-c;
+        gap: 1.5rem;
+        padding: 1rem 0;
+
+        .seccion__texto{
+            @include texto(1.3rem);
+            color: map-get($colores,color_encabezado-letra);
+            font-weight: 300;
+            width: 70%;
+        }
+
+        .seccion__titulo{
+            @include texto(2rem);
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+        }
+
+        .seccion__imagenes{
+            img{
+                width: 80%;
+                display:block;
+                margin:auto;
+            }
+        }
+
+        .seccion__imagenes--carta{
+            img{
+                width: 80%;
+                display:block;
+                margin:auto;
+            }
+        }
+
+        .carousel{
+            .carousel-inner{
+                .carousel-item{
+                    .imagen{
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //Footer
+    .pie{
+        @extend %flex-c;
+        width: 100%;
+    
+        background-color: map-get($colores,color_encabezado);
+        color: map-get($colores,color_encabezado-letra);
+        padding: 1rem 0;
+
+        p{
+            margin: 0;
+        }
+
+        .pie__principal{
+            @extend %flex-c;
+            gap: 1rem;
+
+            .pie__texto{
+                .pie__titulo{
+                    @include texto(1rem);
+                }
+            }
+            
+            .pie__mapa{
+                display: none;
+            }
+            
+            .pie__redes{
+                @extend %flex-c;
+                gap: 1rem;
+    
+                div{
+                    @extend %flex-r;
+    
+                    a{
+                        margin: 0 2rem;
+                    }
+                }
+            }
+        }
+        
+        
+        
+        .pie__derechos{
+            @extend %flex-r;
+            margin-top: 1rem;
+        }
+    }
+
+    .seccion__carta{
+        width: 90%;
+        @extend %flex-r;
+        .carta{
+            width: 100%;
+            font-weight: bold;
+            display: grid;
+            grid-template-rows: 0.3fr repeat(8,1fr);
+            grid-template-columns:auto;
+        
+            justify-content: center;
+            align-items: center;
+        
+            row-gap: 1rem;
+            color: map-get($colores,color_encabezado-letra);
+
+            div{
+                a{
+                    text-decoration:none;
+                    color: map-get($colores,color_encabezado-letra);
+                }
+            }
+            .carta__titulo{
+                @include texto(2.5rem);
+                font-weight: 400;
+                margin-bottom: 0.5rem;
+                text-align: center;
+            }
+
+            .seccion__imagenes--carta{
+                .img_descripcion{
+                    margin-top: 0.5rem;
+                    text-align: center;
+                }
+            }
+
+        }
+    }
+
+
+    //Modificaciones de bootstrap
+    .container{
+        .row{
+            div{
+                .card__boton{
+                    background-color: map-get($colores,color_encabezado-borde);
+                    width: 100%;
+                    border:1px solid black;
+                }
+                .card__boton:focus{
+                    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+                }
+                
+                .card__espaciado{
+                    @extend %flex-c;
+                    justify-content: space-between;
+                }
+                
+                .precio{
+                    color: map-get($colores,color_precio);
+                }
+
+                
+            }
+            .card__titulo{
+                @include texto(2rem);
+                color: map-get($colores,color_seccion);
+            }
+
+            .card__ancho{
+                width: 80%;
+            }
+        }
+    }
+
+    //Media queries
+    @media screen and (min-width: 480px) and (max-width: 991px)  {
+        //Icono whatsapp
+        .whatsapp{
+            display: block;
+            position: fixed;
+            right: 1rem;
+            bottom: 1rem;
+            z-index: 2;
+        }
+
+        //Header
+        .encabezado{    
+            flex-direction: column;
+            height: 12rem;
+            gap: 1rem;
+
+            .encabezado__logo{
+                height: 50%;
+
+                a{
+                    img{
+                        width: 5.5rem;
+                    }
+                }
+            }
+
+            .encabezado__menu{
+                ul{
+                    display: flex;
+                    gap: 1rem;
+                }
+            }
+        }
+
+        //Main
+        .principal{
+            width: 75%;
+
+            .principal__img{
+                display: block;
+                width: 75%;
+            }
+        }
+        
+        //Section
+        .seccion{
+            width: 75%;
+            align-content: center;
+        }
+        
+        //Footer
+        .pie{
+            .pie__principal{
+                .pie__mapa{
+                    display: block;
+                }
+            }
+        }
+
+        //Carta
+        .seccion__carta{
+            width: 75%;
+            .carta{
+                grid-template-rows: 0.3fr repeat(4,1fr);
+                grid-template-columns: auto auto;
+                grid-template-areas: 
+                                    "titulo titulo"
+                                    "img01 img02"
+                                    "img03 img04"
+                                    "img05 img06"
+                                    "img07 img08";
+                justify-content: center;
+                row-gap: 1rem;
+    
+                div{
+                    a{
+                        img{
+                            width: 70%;
+                            display:block;
+                            margin:auto;
+                        }
+                    }
+                }
+                .carta__titulo{
+                    grid-area: titulo;
+                }
+                .img01{
+                    grid-area: img01;
+                }
+            
+                .img02{
+                    grid-area: img02;
+                }
+            
+                .img03{
+                    grid-area: img03;
+                }
+            
+                .img04{
+                    grid-area: img04;
+                }
+            
+                .img05{
+                    grid-area: img05;
+                }
+            
+                .img06{
+                    grid-area: img06;
+                }
+            
+                .img07{
+                    grid-area: img07;
+                }
+            
+                .img08{
+                    grid-area: img08;
+                }
+            }
+        }
+
+        //Card carta
+        .container{
+            .row{
+                .card__ancho{
+                    width: 30%;
+                }
+            }
+        }
+        
+        //Card Formulario
+        .container-fluid{
+            .card__formulario{
+                width: 50%;
+            }
+        }
+    
+    }
+
+    @media screen and (min-width: 992px){
+        //Icono whatsapp
+        .whatsapp{
+            display: block;
+            position: fixed;
+            right: 0.2rem;
+            bottom: 0.5rem;
+            z-index: 2;
+        }
+
+        //Header
+        .encabezado{
+            height: 5rem;
+            flex-direction: row;
+            justify-content: space-around;
+            position: sticky;
+            top: 0;
+            z-index: 2;
+
+            .encabezado__menu{
+                ul{
+                    display: flex; 
+                    margin: 0;
+                    padding-left: 0;
+                    gap: 2rem;
+
+                    li{
+                        padding: 0.5rem;
+                        border:1px solid map-get($colores,color_encabezado);
+                        border-radius:1rem;
+                    }
+                }
+            }
+
+            .encabezado__logo{
+                margin: 0;
+
+                a{
+                    img{
+                        width: 4rem;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        //Main
+        .principal{
+            flex-direction: row;
+
+            .principal__texto{
+                width: 50%;
+            }
+            .principal__img{
+                display: block;
+                width: 50%;
+            }
+            .card__boton:hover{
+                background-color: map-get($colores,color_encabezado-borde);
+            }
+        }
+        .principal--btn{
+            flex-direction: column;
+        }
+
+        //Section
+        .seccion{
+            flex-direction: row;
+            padding: 2rem;
+            justify-content: center; 
+
+            .carousel{
+                .carousel-inner{
+                    .carousel-item{
+                        .imagen{
+                    
+                            img{
+                                width: 80%;
+                                display:block;
+                                margin:auto;
+                            }
+                        }
+                        .imagen-nos{
+                            img{
+                                width: auto;
+                                height: 400px;
+                                display:block;
+                                margin:auto;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .seccion__texto{
+                width: 50%;
+            }
+            .seccion__imagenes{
+                width: 50%;
+            }
+        
+            .seccion__texto--orden{
+                order: 2;
+            }
+            .seccion__imagenes--orden{
+                order: 1;
+            }
+        }
+
+        //Footer
+        .pie{
+            .pie__principal{
+                width: 100%;
+                flex-direction: row;
+                padding: 0 4rem;
+                .pie__texto{
+                    width: 33.33%;
+                }
+                .pie__mapa{
+                    display: block;
+                    width: 33.33%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .pie__redes{
+                    width: 33.33%;
+                }
+            }
+        }
+
+        //Carta
+        .seccion__carta{
+            .carta{
+                grid-template-rows: 0.3fr repeat(3,1fr);
+                grid-template-columns: repeat(7,1fr);
+                row-gap: 1rem;
+    
+                .seccion__imagenes--carta{
+                    a{
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+                .carta__titulo{
+                    grid-row: 1/2;
+                    grid-column: 3/6;
+                }
+                .img01{
+                    grid-row: 2/3;
+                    grid-column: 2/3;
+                }
+            
+                .img02{
+                    grid-row: 2/3;
+                    grid-column: 4/5;
+                }
+            
+                .img03{
+                    grid-row: 2/3;
+                    grid-column: 6/7;
+                }
+            
+                .img04{
+                    grid-row: 3/4;
+                    grid-column: 2/3;
+                }
+            
+                .img05{
+                    grid-row: 3/4;
+                    grid-column: 4/5;
+                }
+            
+                .img06{
+                    grid-row: 3/4;
+                    grid-column: 6/7;
+                }
+            
+                .img07{
+                    grid-row: 4/5;
+                    grid-column: 3/4;
+                }
+            
+                .img08{
+                    grid-row: 4/5;
+                    grid-column: 5/6;
+                }
+            }
+        }
+
+        //Card carta
+        .container{
+            .row{
+                .card__ancho{
+                    width:20%;
+                }
+            }
+        }
+        
+        //Card Formulario
+        .container-fluid{
+            .card__formulario{
+                width: 35%;
+            }
+        }
+
+        //TRANSFORMACIONES
+        .whatsapp:hover{
+            transform: rotate(45deg);
+            transition: $tiempo_animacion;
+        }
+
+        .encabezado{
+            .encabezado__logo:hover{
+                transform: scale(1.1);
+                transition: $tiempo_animacion;
+            }
+            .encabezado__menu{
+                ul{
+                    li:hover{
+                        border-color: map-get($colores,color_encabezado-borde);
+                        transition: $tiempo_animacion;
+                    }
+                }
+            }
+        }
+
+        .seccion__carta{
+            .carta{
+                .seccion__imagenes--carta:hover{
+                    transform: scale(1.1);
+                    transition: $tiempo_animacion;
+                }
+            }
+        }
+        .pie{
+            .pie__principal{
+                .pie__redes{
+                    div{
+                        a:hover{
+                            transform: scale(1.1);
+                            transition: $tiempo_animacion;
+                        }
+                    }
+                }
+            }
+        }
+    
+    }
+
+}
+

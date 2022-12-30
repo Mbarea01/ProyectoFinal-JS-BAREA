@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://kit.fontawesome.com/c08f3196dd.js" crossorigin="anonymous"></script>
+
+	<meta name="description" content="Es la carta de la cafeteria Vicentica">
+   	<meta name="keywords" content="SALADOS, DULCES, ANTOJOS, PROMOCIONES, CARTA, CAFETERÍA, PASTELERÍA, MENDOZA, VICENTICA">
+	<!-- Animaciones -->
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<!-- Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+	<!-- Mi CSS -->
+	<link rel="stylesheet" href="../css/styles.css">
+
+
+	<link rel="shortcut icon" href="../img/favicon.png">
+    <title> Vicentica - Carta </title>
+</head>
+<body>
+	<div class="contenedor">
+		<header class="encabezado">
+			<div class="encabezado__logo">
+				<a href="../index.html">
+					<img src="../img/favicon.png" alt="Logo de vicentica">
+				</a>
+			</div>
+			<nav class="encabezado__menu">
+				<ul>
+					<li><a href="../index.html">Inicio</a></li>
+					<li><a href="tortas.html">Tortas</a></li>
+					<li><a href="carta.html">Carta</a></li>
+					<li><a href="nosotros.html">Nosotros</a></li>
+					<li><a href="contacto.html">Contacto</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<div class="whatsapp">
+			<a href="https://api.whatsapp.com/send/?phone=542613384973&text=Hola%21+me+comunico+desde+Quierolacarta%21+Hay+alguien+por+ah%C3%AD%3F+tengo+una+consulta%21&type=phone_number&app_absent=0" target="_blank"><i class="fa-brands fa-whatsapp fa-3x" style="color: #25D366;"></i></a>
+		</div>
+
+		<main class="principal" data-aos="fade-up">
+			<div class="principal__texto">
+				<h1>CARTA</h1>
+			</div>
+		</main>
+
+		<section class="seccion" data-aos="fade-down">
+			<div class="seccion__texto seccion__texto--orden">
+				<p class="seccion__titulo"> Mira lo que tenemos!</p>
+				<p> Tocá y accedé a nuestra carta </p>
+			</div>
+			<div class="seccion__imagenes seccion__imagenes--orden">
+				<a href="https://quierolacarta.com/local/66" target="_blank"><img src="../img//quierolacarta.png" alt="Logo quiero la carta"></a>
+			</div>
+		</section>
+
+		<section class="seccion__carta" data-aos="fade-up">
+			<div class="seccion carta">
+				<p class="carta__titulo"> Nuestra carta </p>
+				<div class="img01 seccion__imagenes--carta">
+					<a href="#paraCompartir">
+						<img src="../img/menu/01.jpg" alt="Foto de comida para compartir">
+						<p class="img_descripcion"> Para compartir </p>
+					</a>
+				</div>
+				<div class="img02 seccion__imagenes--carta">
+					<a href="#promosCalientes">
+						<img src="../img/menu/02.jpg" alt="Foto de promos calientes">
+						<p class="img_descripcion"> Promos calientes </p>
+					</a>
+				</div>
+				<div class="img03 seccion__imagenes--carta">
+					<a href="#promosFrias">
+						<img src="../img/menu/03.jpg" alt="Foto de promos frías">
+						<p class="img_descripcion"> Promos frías </p>
+					</a>
+				</div>
+				<div class="img04 seccion__imagenes--carta">
+					<a href="#pasteleria">
+						<img src="../img/menu/04.jpg" alt="Foto de pastelería">
+						<p class="img_descripcion"> Pastelería </p>
+					</a>
+				</div>
+				<div class="img05 seccion__imagenes--carta">
+					<a href="#salados">
+						<img src="../img/menu/05.jpg" alt="Foto de salado">
+						<p class="img_descripcion"> Salados </p>
+					</a>
+				</div>
+				<div class="img06 seccion__imagenes--carta">
+					<a href="#antojos">
+						<img src="../img/menu/06.jpg" alt="Foto de antojos">
+						<p class="img_descripcion"> Antojos </p>
+					</a>
+				</div>
+				<div class="img07 seccion__imagenes--carta">
+					<a href="#cafeteria">
+						<img src="../img/menu/07.jpg" alt="Foto de Cafetería">
+						<p class="img_descripcion"> Cafetería </p>
+					</a>
+				</div>
+				<div class="img08 seccion__imagenes--carta">
+					<a href="#sin-tacc">
+						<img src="../img/menu/08.jpg" alt="Foto sin tacc">
+						<p class="img_descripcion"> Sin Tacc </p>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="container">	
+
+			<!-- CARDS PARA COMPARTIR -->
+
+			<div class="row" id="paraCompartir">
+				<p class="col-12 text-center card__titulo">PARA COMPARTIR</p>
+			</div>
+
+			<div id="contenedorProductos" class="row d-flex justify-content-center gap-3">
+			<!--	<div class="col-xs-12 col-sm-4 card bg-light mt-2 card__ancho p-3">
+					<img src="../img/menu/compartir/promo-sandwich.jpg" class="card-img-top" alt="Promo sandwich">
+					<div class="card-body card__espaciado">
+					  <p class="card-title text-center">Promo sandwich casero bebidas calientes</p>
+					  <p class="card-text text-center precio">$1000</p>
+					  <button id="1" class="btn btn-primary card__boton">Agregar</button>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4 card bg-light mt-2 card__ancho p-3">
+					<img src="../img/menu/compartir/super-branch-bf.jpg" class="card-img-top" alt="Foto de desayuno brunch frio">
+					<div class="card-body card__espaciado">
+						<p class="card-title text-center">Súper brunch con bebidas frías</p>
+						<p class="card-text text-center precio">$2500</p>
+						<a href="#" class="btn btn-primary card__boton">Agregar</a>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4 card bg-light mt-2 card__ancho p-3">
+					<img src="../img/menu/compartir/super-branch.jpg" class="card-img-top" alt="Foto de desayuno brunch caliente">
+					<div class="card-body card__espaciado">
+						<p class="card-title text-center">Super brunch con bebidas calientes</p>
+						<p class="card-text text-center precio">$1200</p>
+						<a href="#" class="btn btn-primary card__boton">Agregar</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- CARDS PROMOS CALIENTES 
+
+
+			<div class="row" id="promosCalientes">
+				<p class="col-12 text-center mt-4 card__titulo">PROMOS CALIENTES</p>
+			</div>
+
+			<div class="row d-flex justify-content-center gap-3">
+				<div class="col-xs-12 col-sm-6 card bg-light mt-2 card__ancho p-3">
+					<img src="../img/menu/promos-cal/promo1.jpg" class="card-img-top" alt="Foto desayuno americano">
+					<div class="card-body card__espaciado">
+					  <p class="card-title text-center">Promo 1 (Americano)</p>
+					  <p class="card-text text-center precio">$1650</p>
+					  <a href="#" class="btn btn-primary card__boton">Agregar</a>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 card bg-light mt-2 card__ancho p-3">
+					<img src="../img/menu/promos-cal/promo2.jpg" class="card-img-top" alt="Foto desayuno clásico">
+					<div class="card-body card__espaciado">
+						<p class="card-title text-center">Promo 2 (Clásica)</p>
+						<p class="card-text text-center precio">$2000</p>
+						<a href="#" class="btn btn-primary card__boton">Agregar</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- CARDS PROMOS FRIAS 
+
+			<div class="row" id="promosFrias">
+				<p class="col-12 text-center mt-4 card__titulo">PROMOS FRIAS</p>
+			</div>
+			<div class="row d-flex justify-content-center gap-3">
+				<div class="col-xs-12 col-sm-4 card bg-light mt-2 card__ancho p-3">
+					<img src="../img/menu/promos-fr/promo2.jpg" class="card-img-top" alt="Promo 1 cafeteria fria">
+					<div class="card-body card__espaciado">
+					  <p class="card-title text-center">Promo 1. Fríos</p>
+					  <p class="card-text text-center precio">$1620</p>
+					  <a href="#" class="btn btn-primary card__boton">Agregar</a>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4 card bg-light mt-2 card__ancho p-3">
+					<img src="../img/menu/promos-fr/promo3.jpg" class="card-img-top" alt="Promo 2 cafeteria fria">
+					<div class="card-body card__espaciado">
+						<p class="card-title text-center">Promo 2. Fríos</p>
+						<p class="card-text text-center precio">$1800</p>
+						<a href="#" class="btn btn-primary card__boton">Agregar</a>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4 card bg-light mt-2 card__ancho p-3">
+					<img src="../img/menu/promos-fr/promo4.jpg" class="card-img-top" alt="Promo 3 cafeteria fria">
+					<div class="card-body card__espaciado">
+						<p class="card-title text-center">Promo 3. Fríos</p>
+						<p class="card-text text-center precio">$1760</p>
+						<a href="#" class="btn btn-primary card__boton">Agregar</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- CARDS PASTELERIA 
+
+			<div class="row" id="pasteleria">
+				<p class="col-12 text-center mt-4 card__titulo">PASTELERÍA</p>
+			</div>
+
+			<div class="row d-flex justify-content-center gap-3">
+				<div class="col-xs-12 col-sm-3 card bg-light mt-2 card__ancho p-3">
+					<img src="../img/menu/pasteleria/cabsha.jpg" class="card-img-top" alt="Foto de torta Cabsha">
+					<div class="card-body card__espaciado">
+					  <p class="card-title text-center">CABSHA</p>
+					  <p class="card-text text-center precio">$1490</p>
+					  <a href="#" class="btn btn-primary card__boton">Agregar</a>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-3 card bg-light mt-2 card__ancho p-3">
+					<img src="../img/menu/pasteleria/cheescake.jpg" class="card-img-top" alt="Foto de Cheescake">
+					<div class="card-body card__espaciado">
+						<p class="card-title text-center">Cheescake</p>
+						<p class="card-text text-center precio">$3000</p>
+						<a href="#" class="btn btn-primary card__boton">Agregar</a>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-3 card bg-light mt-2 card__ancho p-3">
+					<img src="../img/menu/pasteleria/selva-negra.jpg" class="card-img-top" alt="Foto de torta Selva Negra">
+					<div class="card-body card__espaciado">
+						<p class="card-title text-center">Selva Negra</p>
+						<p class="card-text text-center precio">$2900</p>
+						<a href="#" class="btn btn-primary card__boton">Agregar</a>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-3 card bg-light mt-2 card__ancho p-3">
+					<img src="../img/menu/pasteleria/tiramisu.jpg" class="card-img-top" alt="Foto de tiramisu">
+					<div class="card-body card__espaciado">
+						<p class="card-title text-center">Tiramisu</p>
+						<p class="card-text text-center precio">$3500</p>
+						<a href="#" class="btn btn-primary card__boton">Agregar</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- CARDS SALADOS 
+
+			<div class="row" id="salados"> 
+				<p class="col-12 text-center mt-4 card__titulo">SALADOS</p>
+			</div>
+
+			<div class="row d-flex justify-content-center gap-3">
+				<div class="col-xs-12 col-sm-4 card bg-light mt-2 card__ancho p-3">
+					<img src="../img/menu/salados/sandw-casero.jpg" class="card-img-top" alt="Foto de sandwich casero">
+					<div class="card-body card__espaciado">
+					  <p class="card-title text-center">Sandwich casero</p>
+					  <p class="card-text text-center precio">$1000</p>
+					  <a href="#" class="btn btn-primary card__boton">Agregar</a>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4 card bg-light mt-2 card__ancho p-3">
+					<img src="../img/menu/salados/sandw-primavera.jpg" class="card-img-top" alt="Foto de sandwich primavera">
+					<div class="card-body card__espaciado">
+						<p class="card-title text-center">Sandwich Primavera</p>
+						<p class="card-text text-center precio">$1340</p>
+						<a href="#" class="btn btn-primary card__boton">Agregar</a>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4 card bg-light mt-2 card__ancho p-3">
+					<img src="../img/menu/salados/tostado.jpg" class="card-img-top" alt="Foto de tostado">
+					<div class="card-body card__espaciado">
+						<p class="card-title text-center">Tostado</p>
+						<p class="card-text text-center precio">$900</p>
+						<a href="#" class="btn btn-primary card__boton">Agregar</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- CARDS ANTOJOS 
+
+			<div class="row" id="antojos">
+				<p class="col-12 text-center mt-4 card__titulo">ANTOJOS</p>
+			</div>
+
+			<div class="row d-flex justify-content-center gap-3">
+				<div class="col-xs-12 col-sm-6 card bg-light mt-2 card__ancho p-3">
+					<img src="../img/menu/antojos/medialuna-rellena.jpg" class="card-img-top" alt="Foto de medialuna rellena">
+					<div class="card-body card__espaciado">
+					  <p class="card-title text-center">Medialuna rellena</p>
+					  <p class="card-text text-center precio">$300</p>
+					  <a href="#" class="btn btn-primary card__boton">Agregar</a>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 card bg-light mt-2 card__ancho p-3">
+					<img src="../img/menu/antojos/waffle.jpg" class="card-img-top" alt="Foto de waffle">
+					<div class="card-body card__espaciado">
+						<p class="card-title text-center">Waffle</p>
+						<p class="card-text text-center precio">$700</p>
+						<a href="#" class="btn btn-primary card__boton">Agregar</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- CARDS CAFETERIA 
+
+			<div class="row" id="cafeteria">
+				<p class="col-12 text-center mt-4 card__titulo">Cafetería</p>
+			</div>
+
+			<div class="row d-flex justify-content-center gap-3">
+				<div class="col-xs-12 col-sm-6 card bg-light mt-2 card__ancho p-3">
+					<img src="../img/menu/cafeteria/cafe.jpg" class="card-img-top" alt="Foto de cafe">
+					<div class="card-body card__espaciado">
+					  <p class="card-title text-center">Cafe grande</p>
+					  <p class="card-text text-center precio">$200</p>
+					  <a href="#" class="btn btn-primary card__boton">Agregar</a>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 card bg-light mt-2 card__ancho p-3">
+					<img src="../img/menu/cafeteria/capuchino.jpg" class="card-img-top" alt="Foto de capuchino">
+					<div class="card-body card__espaciado">
+						<p class="card-title text-center">Capuchino</p>
+						<p class="card-text text-center precio">$300</p>
+						<a href="#" class="btn btn-primary card__boton">Agregar</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- CARDS SIN TACC 
+
+
+			<div class="row" id="sin-tacc">
+				<p class="col-12 text-center mt-4 card__titulo">SIN TACC</p>
+			</div>
+
+			<div class="row d-flex justify-content-center gap-3">
+				<div class="col-xs-12 col-sm-12 card bg-light mt-2 card__ancho p-3">
+					<img src="../img/menu/sin-tacc/tortas.jpg" class="card-img-top" alt="Foto de logo">
+					<div class="card-body card__espaciado">
+					  <p class="card-title text-center">Torta a elección</p>
+					  <p class="card-text text-center precio">$900</p>
+					  <a href="#" class="btn btn-primary card__boton">Agregar</a>
+					</div>
+				</div> -->
+			</div>
+
+		</section>
+<!-- CARRITO DE COMPRAS -->
+<hr>
+<h2>Carrito de Compras</h2>
+<h3>El total de la compra es de <span id="total"></span></h3>
+<button class="btn colorBoton" id="verCarrito">Ver Carrito</button>
+<button class="btn colorBoton" id="vaciarCarrito">Vaciar Carrito</button>
+
+<div id="contenedorCarrito" class="row"></div>
+
+		<footer class="pie">
+			<div class="pie__principal">
+				<div class="pie__texto">
+					<p class="pie__titulo">VICENTICA CAFE & PASTELERÍA</p>
+					<p class="pie__titulo">Pellegrini Carlos 92, Mendoza</p>
+				</div>
+				
+				<div class="pie__mapa">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13403.301864451927!2d-68.836873!3d-32.876337!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdaaaaf73c482aad3!2sVicentica%20Caf%C3%A9%20%26%20Pasteler%C3%ADa!5e0!3m2!1ses-419!2sar!4v1658171077864!5m2!1ses-419!2sar" width="300" height="100" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
+		
+				<div class="pie__redes">
+					<p>Seguinos en nuestras redes!</p>
+					<div>
+						<a href="https://www.instagram.com/vicenticapasteleriaycafe/?hl=es" target="_blank"><i class="fa-brands fa-instagram fa-2x" style="color: black;"></i></a>
+						<a href="https://m.facebook.com/Cafe.Pasteleria.Vicentica" target="_blank"><i class="fa-brands fa-facebook fa-2x" style="color: black;"></i></a>
+						<a href="https://twitter.com/vicentica9 target="_blank><i class="fa-brands fa-twitter fa-2x" style="color: black;"></i></a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="pie__derechos">
+				<i class="fa-regular fa-copyright fa-1x" style="color: whitesmoke;"></i>
+				<p> Todos los derechos reservados. </p>
+			</div>
+			
+		</footer>
+	</div>
+
+	<!-- Bootstrap -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+	<!-- Animaciones -->
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+		AOS.init({
+			duration:1000
+		});
+	</script>
+	<!-- Iconos -->
+	<script src="https://kit.fontawesome.com/c08f3196dd.js" crossorigin="anonymous"></script>
+	<script src="main.js"></script>
+</body>
+</html>
